@@ -34,6 +34,10 @@ const CommentPage = () => {
     setComment(e.target.value)
   }
 
+  const handleBack = () => {
+    navigate(-1)
+  }
+
   const onSubmit = async (newComment) => {
     try {
       setLoading(true)
@@ -54,10 +58,6 @@ const CommentPage = () => {
       setButtonText('Ошибка')
       console.log(error)
     }
-  }
-
-  const handleBack = () => {
-    navigate(-1)
   }
 
   return (

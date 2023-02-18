@@ -57,7 +57,12 @@ const AdsPage = () => {
   const sells_from = data?.user?.sells_from
 
   const openCloseAdSettings = () => {
-    setAdSettingsVisible(!isAdSettingsVisible)
+    if (isDesktop) {
+      setAdSettingsVisible(!isAdSettingsVisible)
+    }
+    if (isMobile && data?.id) {
+      navigate(`/settings/${data?.id}`)
+    }
   }
 
   const openCloseComments = () => {

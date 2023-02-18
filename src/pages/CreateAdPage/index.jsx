@@ -106,91 +106,93 @@ const CreateAdPage = () => {
         </div>
         <h2 className={classes.title}>Новое объявление</h2>
       </div>
-      <form
-        className={classes.form}
-        onSubmit={handleSubmit(onSubmit)}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className={classes.content}>
-          <label className={classes.label}>
-            Название
-            <input
-              {...register('title', {
-                required: 'Введите название',
-              })}
-              className={classes.input}
-              type="text"
-              placeholder="Введите название"
-              value={fieldValue.title || ''}
-              onChange={(e) => handleFieldChange(e, 'title')}
-              autoFocus
-            />
-          </label>
-          {errors.title && (
-            <span className={classes.error}>{errors.title.message}</span>
-          )}
-        </div>
-
-        <div className={classes.content}>
-          <label className={classes.label}>
-            Описание
-            <textarea
-              {...register('description')}
-              className={classes.area}
-              cols="auto"
-              rows={1}
-              placeholder="Введите описание"
-              value={fieldValue.description}
-              onChange={(e) => handleFieldChange(e, 'description')}
-            ></textarea>
-          </label>
-        </div>
-
-        <div className={classes.content}>
-          <p className={classes.subtitle}>
-            Фотографии товара{' '}
-            <span>не более {NUMBER_OF_IMAGES} фотографий</span>
-          </p>
-          <div className={classes.imgBlock}>
-            <UpdateAdsImages
-              formData={formData}
-              updatedImagesArray={updatedImagesArray}
-            />
-          </div>
-        </div>
-
-        <div className={cn(classes.content, classes.priceBlock)}>
-          <label className={classes.label}>
-            Цена
-            <div className={classes.priceArea}>
-              <input
-                {...register('price', {
-                  required: 'Введите корректную цену',
-                  pattern: {
-                    value: validPrice,
-                    message: 'Введите корректную цену',
-                  },
-                })}
-                className={cn(classes.input, classes.priceInput)}
-                value={price}
-                data-cy="create-price"
-                onChange={handleChangePrice}
-              />
-              <div className={classes.cost}>₽</div>
-            </div>
-          </label>
-        </div>
-        <Button
-          type="submit"
-          btnName="disabled"
-          className={cn(
-            classes.button,
-            isFormValid && !loading && classes.btnSubmit
-          )}
+      <div className={classes.scrollWrapper}>
+        <form
+          className={classes.form}
+          onSubmit={handleSubmit(onSubmit)}
+          onClick={(e) => e.stopPropagation()}
         >
-          {buttonText}
-        </Button>
-      </form>
+          <div className={classes.content}>
+            <label className={classes.label}>
+              Название
+              <input
+                {...register('title', {
+                  required: 'Введите название',
+                })}
+                className={classes.input}
+                type="text"
+                placeholder="Введите название"
+                value={fieldValue.title || ''}
+                onChange={(e) => handleFieldChange(e, 'title')}
+                autoFocus
+              />
+            </label>
+            {errors.title && (
+              <span className={classes.error}>{errors.title.message}</span>
+            )}
+          </div>
+
+          <div className={classes.content}>
+            <label className={classes.label}>
+              Описание
+              <textarea
+                {...register('description')}
+                className={classes.area}
+                cols="auto"
+                rows={1}
+                placeholder="Введите описание"
+                value={fieldValue.description}
+                onChange={(e) => handleFieldChange(e, 'description')}
+              ></textarea>
+            </label>
+          </div>
+
+          <div className={classes.content}>
+            <p className={classes.subtitle}>
+              Фотографии товара{' '}
+              <span>не более {NUMBER_OF_IMAGES} фотографий</span>
+            </p>
+            <div className={classes.imgBlock}>
+              <UpdateAdsImages
+                formData={formData}
+                updatedImagesArray={updatedImagesArray}
+              />
+            </div>
+          </div>
+
+          <div className={cn(classes.content, classes.priceBlock)}>
+            <label className={classes.label}>
+              Цена
+              <div className={classes.priceArea}>
+                <input
+                  {...register('price', {
+                    required: 'Введите корректную цену',
+                    pattern: {
+                      value: validPrice,
+                      message: 'Введите корректную цену',
+                    },
+                  })}
+                  className={cn(classes.input, classes.priceInput)}
+                  value={price}
+                  data-cy="create-price"
+                  onChange={handleChangePrice}
+                />
+                <div className={classes.cost}>₽</div>
+              </div>
+            </label>
+          </div>
+          <Button
+            type="submit"
+            btnName="disabled"
+            className={cn(
+              classes.button,
+              isFormValid && !loading && classes.btnSubmit
+            )}
+          >
+            {buttonText}
+          </Button>
+        </form>
+      </div>
     </PageWrapper>
   )
 }

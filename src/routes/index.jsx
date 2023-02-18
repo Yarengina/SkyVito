@@ -8,6 +8,7 @@ import ProtectedRoute from './ProtectedRoute'
 import LoginPage from '../pages/LoginPage'
 import SignUpPage from '../pages/SignUpPage'
 import CommentPage from '../pages/CommentPage'
+import SettingsPage from '../pages/SettingsPage'
 import useLoadCredentials from '../hooks/useLoadCredentials'
 
 const AppRoutes = () => {
@@ -24,7 +25,7 @@ const AppRoutes = () => {
         <Route path="/seller/:id" element={<SellerPage />} />
         <Route path="/createAd" element={<CreateAdPage />} />
         <Route path="/comments/:id" element={<CommentPage />} />
-
+        <Route path="/settings/:id" element={<SettingsPage />} />
       </Route>
     </Routes>
   )
