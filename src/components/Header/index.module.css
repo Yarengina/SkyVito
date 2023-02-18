@@ -1,0 +1,39 @@
+.wrapper {
+  background-color: #009ee4;
+}
+
+.nav {
+  max-width: 1178px;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 79px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btnOne {
+  width: 232px;
+}
+
+.btnTwo {
+  width: 173px;
+  margin-left: 10px;
+}
+
+.btnThree {
+  width: 106px;
+  margin-left: 20px;
+}
+
+.logoMobile {
+  height: 32px;
+  margin-left: 17px;
+}
+
+.headerMobile {
+  display: flex;
+  align-items: center;
+  padding-top: 11px;
+  padding-bottom: 12px;
+}

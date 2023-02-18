@@ -1,0 +1,18 @@
+.button {
+  width: 214px;
+  height: 62px;
+  margin-left: inherit;
+}
+
+.button span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (max-width: 425px) {
+  .button {
+    width: 278px;
+    height: 57px;
+  }
+}
