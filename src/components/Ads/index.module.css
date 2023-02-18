@@ -52,4 +52,9 @@
     max-height: inherit;
     min-height: 350px;
   }
+
+  .notice {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
