@@ -1,0 +1,65 @@
+.btn {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.main {
+  margin-left: 10px;
+  width: 158px;
+  height: 50px;
+  background-color: #009ee4;
+  border: 1px solid #009ee4;
+  color: #ffffff;
+}
+
+.main:hover {
+  background-color: #0080c1;
+  border: 1px solid #0080c1;
+}
+
+.main:active {
+  background-color: #009ee4;
+  border: 1px solid #009ee4;
+}
+
+.header {
+  width: 224px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.header:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.header:active {
+  background-color: transparent;
+}
+
+.disabled,
+.disabled:hover,
+.disabled:active {
+  color: #ffffff;
+  background-color: #d9d9d9;
+  border: 1px solid #d9d9d9;
+  transform: none;
+  cursor: default;
+}
+
+.login {
+  background-color: transparent;
+  border: 1px solid #d0cece;
+  color: #000000;
+}
+
+.login:hover {
+  background-color: #f0f0f0;
+}

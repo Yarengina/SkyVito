@@ -1,0 +1,266 @@
+.wrapper {
+  display: flex;
+  max-width: 1178px;
+  margin: 0 auto;
+  padding: 0 5px 70px;
+}
+
+.notice {
+  min-height: 820px;
+  max-width: 1178px;
+  font-size: 22px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+.imagesBlock {
+  max-width: 480px;
+  margin-right: 54px;
+}
+
+.images {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgCenter {
+  width: 480px;
+  height: 480px;
+  background-color: #f0f0f0;
+  margin: 0 5px;
+}
+
+.imgCenter img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.imgBar {
+  margin-top: 30px;
+  width: 490px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  overflow: hidden;
+  margin-left: -5px;
+}
+
+.img {
+  width: 88px;
+  min-width: 88px;
+  height: 88px;
+  background-color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  margin: 0 5px;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.descriptionBlock {
+  max-width: 621px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 32px;
+  line-height: 46px;
+  margin-bottom: 10px;
+}
+
+.infoBlock {
+  margin-bottom: 34px;
+}
+
+.info {
+  font-size: 16px;
+  line-height: 21px;
+  color: #5f5f5f;
+  margin-bottom: 4px;
+}
+
+.comment {
+  font-size: 16px;
+  line-height: 21px;
+  color: #009ee4;
+  cursor: pointer;
+}
+
+.price {
+  font-size: 28px;
+  line-height: 39px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Roboto-Bold', sans-serif;
+}
+
+.authorBlock {
+  margin-top: 34px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.authorImg {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.authorImg img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.authorInfo {
+  margin-left: 12px;
+}
+
+.authorName {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #009ee4;
+  cursor: pointer;
+}
+
+.authorAbout {
+  font-size: 16px;
+  line-height: 32px;
+  color: #5f5f5f;
+}
+
+.main {
+  max-width: 1178px;
+  margin: 0 auto;
+  padding: 0px 5px;
+}
+
+.subtitle {
+  margin-bottom: 32px;
+  padding: 0 5px;
+}
+
+.textWrapper {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.btnRedact {
+  width: 189px;
+  margin-left: inherit;
+}
+
+.btnRemove {
+  width: 225px;
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    max-width: 425px;
+    padding: 0 5px 10px;
+  }
+
+  .imgCenter {
+    width: 410px;
+  }
+
+  .imagesBlock {
+    max-width: inherit;
+    margin-right: inherit;
+  }
+
+  .images {
+    display: block;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 30px 0px 20px 5px;
+  }
+
+  .infoBlock {
+    margin: 0px 0px 20px 5px;
+  }
+
+  .price {
+    margin: 0px 0px 20px 5px;
+    font-size: 18px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btnRedact {
+    width: 278px;
+    height: 46px;
+    font-size: 16px;
+  }
+
+  .btnRemove {
+    width: 278px;
+    height: 46px;
+    font-size: 16px;
+    margin-left: inherit;
+  }
+
+  .authorName {
+    font-size: 18px;
+  }
+
+  .authorAbout {
+    font-size: 14px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .text {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+
+  .textWrapper {
+    margin-bottom: 130px;
+  }
+}

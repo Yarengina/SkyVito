@@ -1,0 +1,56 @@
+.wrapper {
+  background-color: #f4f5f6;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+}
+
+.modal {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 23px;
+  height: 23px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 23px;
+  width: 2px;
+  background-color: #b3adad;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 424.98px) {
+  .modal {
+    padding: 33px 25px 44px;
+  }
+}
