@@ -50,5 +50,6 @@
   .content {
     grid-auto-rows: 260px;
     max-height: inherit;
+    min-height: 350px;
   }
 }
