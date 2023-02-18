@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import Button from '../../Ui/Button'
 import { NUMBER_OF_IMAGES, validPrice, regexp } from '../../../utils/constants'
 import {
