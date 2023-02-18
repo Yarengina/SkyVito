@@ -28,6 +28,7 @@ const AdsPage = () => {
   const isDesktop = useMediaQuery({
     query: SCREEN_SIZE.desktop,
   })
+  const isMobile = useMediaQuery({ query: SCREEN_SIZE.mobile })
 
   const adId = Number(useParams()?.id)
   const navigate = useNavigate()
@@ -60,7 +61,12 @@ const AdsPage = () => {
   }
 
   const openCloseComments = () => {
-    setCommentsVisible(!isCommentsVisible)
+    if (isDesktop) {
+      setCommentsVisible(!isCommentsVisible)
+    }
+    if (isMobile && data?.id) {
+      navigate(`/comments/${data?.id}`)
+    }
   }
 
   const handleDeleteAd = async () => {

@@ -7,6 +7,7 @@ import CreateAdPage from '../pages/CreateAdPage'
 import ProtectedRoute from './ProtectedRoute'
 import LoginPage from '../pages/LoginPage'
 import SignUpPage from '../pages/SignUpPage'
+import CommentPage from '../pages/CommentPage'
 import useLoadCredentials from '../hooks/useLoadCredentials'
 
 const AppRoutes = () => {
@@ -22,6 +23,8 @@ const AppRoutes = () => {
         <Route path="/ads/:id" element={<AdsPage />} />
         <Route path="/seller/:id" element={<SellerPage />} />
         <Route path="/createAd" element={<CreateAdPage />} />
+        <Route path="/comments/:id" element={<CommentPage />} />
+
       </Route>
     </Routes>
   )
