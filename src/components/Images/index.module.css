@@ -54,11 +54,16 @@
     position: relative;
     width: 290px;
     min-height: 225px;
+    max-height: 250px;
+  }
+
+  .imgCenter img {
+    max-height: 250px;
   }
 
   .backWrapper {
-    position: fixed;
-    top: 80px;
+    position: absolute;
+    top: 20px;
   }
 
   .back {

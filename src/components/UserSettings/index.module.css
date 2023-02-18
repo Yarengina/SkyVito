@@ -253,10 +253,15 @@
     height: 40px;
   }
 
+  .inputWrapper {
+    margin-bottom: 10px;
+  }
+
   .button {
     width: 278px;
     height: 46px;
     font-size: 16px;
     line-height: 24px;
+    margin-top: 10px;
   }
 }
