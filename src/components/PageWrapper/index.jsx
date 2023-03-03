@@ -21,7 +21,7 @@ const PageWrapper = ({ children, searchBlock = false }) => {
     <div className={classes.wrapper}>
       <div className={classes.container}>
         <Header isLoggedIn={isLoggedIn} searchBlock={searchBlock} />
-        <main>{children}</main>
+        <main className={classes.main}>{children}</main>
         {isMobile && <Footer />}
       </div>
     </div>
